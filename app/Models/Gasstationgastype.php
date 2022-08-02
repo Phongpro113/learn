@@ -10,5 +10,4 @@ class Gasstationgastype extends Model
     use HasFactory;
     protected $table = 'gasstationgastype';
     protected $guarded = [];
-
 }

@@ -31,7 +31,7 @@
                 <select name="district">
                     <option value="">地区</option>
                     @foreach($districtName as $key)
-                        <option value="{{$key->DistrictId}}" name="DistrictId">{{$key->DistrictName}}</option>
+                        <option value="{{$key->DistrictId}}">{{$key->DistrictName}}</option>
                     @endforeach
                 </select>
             </div>
@@ -53,19 +53,17 @@
                 </tr>
                 </thead>
                 <tbody>
-                @foreach($gasStation as $key)
+                @foreach($gas as $key)
                     <tr>
                         <td>{{$key->GasStationName}}</td>
                         <td>
-                            @foreach ($key->gastypeRelation as $value)
                                 @if (!empty($value->TypeText))
                                     {{$value->TypeText}}
                                 @endif
-                            @endforeach
                         </td>
                         <td>
-                            @if(!empty($key->districtRelation->DistrictName))
-                            {{$key->districtRelation->DistrictName}}
+                            @if(!empty($key->DistrictName))
+                            {{$key->DistrictName}}
                             @endif
                         </td>
                         <td>

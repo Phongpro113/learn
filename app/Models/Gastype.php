@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class District extends Model
+class Gastype extends Model
 {
     use HasFactory;
-    protected $table = 'm_district';
-    protected $fillable = ['DistrictId', 'DistrictName'];
+    protected $table = 'gastype';
     protected $guarded = [];
 }

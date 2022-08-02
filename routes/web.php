@@ -25,5 +25,6 @@ Route::post('login', [loginController::class, 'processLogin'])->name('processLog
 
 Route::prefix('admin')->group(function (){
     Route::get('gas-station', [HomeController::class, 'home'])->name('admin.home');
+    Route::post('filter', [HomeController::class, 'filter'])->name('admin.home.filter');
     Route::get('add', [AddController::class, 'add'])->name('admin.add');
 });
